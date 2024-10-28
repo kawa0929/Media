@@ -42,12 +42,13 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         R.drawable.animal4, R.drawable.animal5,
         R.drawable.animal6, R.drawable.animal7,
         R.drawable.animal8, R.drawable.animal9)
+    var AnimalsName = arrayListOf("鴨子","企鵝","青蛙","貓頭鷹","海豚", "牛", "無尾熊", "獅子", "狐狸", "小雞")
 
     Column {
         LazyRow {
             items(50) { index ->
                 Text(index.toString(), modifier = modifier)
-
+                Text(text = AnimalsName[index % 10],modifier = modifier)
                     Image(
                         painter = painterResource(id = Animals[index % 10]),
                         contentDescription = "動物0"
