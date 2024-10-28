@@ -6,10 +6,12 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -45,7 +47,21 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     var AnimalsName = arrayListOf("鴨子","企鵝","青蛙","貓頭鷹","海豚", "牛", "無尾熊", "獅子", "狐狸", "小雞")
 
     Column {
-        LazyRow {
+
+        Row {
+            Button(onClick = {
+                //your onclick code here
+            }) {
+                Text(text = "歡迎修課")
+            }
+
+            Button(onClick = {
+                //your onclick code here
+            }) {
+                Text(text = "展翅飛翔")
+            }
+        }
+            LazyRow {
             items(50) { index ->
                 Text(index.toString(), modifier = modifier)
                 Text(text = AnimalsName[index % 10],modifier = modifier)
