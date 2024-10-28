@@ -51,8 +51,10 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 Text(text = AnimalsName[index % 10],modifier = modifier)
                     Image(
                         painter = painterResource(id = Animals[index % 10]),
-                        contentDescription = "動物0"
-                    )
+                        contentDescription = "動物0",
+                        modifier = Modifier.fillParentMaxWidth(1.0f))
+
+
                 }
             }
 
